@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>lcn.identityserver_management</RootNamespace>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\..\host\lcn.identityserver_management.HttpApi.Host\lcn.identityserver_management.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+    <None Remove="lcn.identityserver_management.HttpApi.csproj.vspscc" />
+    <None Remove="lcn.identityserver_management.HttpApi.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="4.4.4" />
+
+    <ProjectReference Include="..\lcn.identityserver_management.Application.Contracts\lcn.identityserver_management.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
